@@ -17,13 +17,13 @@ export default function App() {
             element={<Home />}
           />
           <Route
-            path="/"
-            element={<Home />}
+            path="/players"
+            element={<Players />}
           />
 
           <Route
-            path="/"
-            element={<Home />}
+            path="/teams"
+            element={<Teams />}
           />
         </Routes>
       </div>
