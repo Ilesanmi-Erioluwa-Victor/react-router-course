@@ -10,7 +10,15 @@ const Home = () => {
   if (loading) {
     return null;
   }
-  return <div>Home</div>;
+    return <div className="container">
+        <h1 className="large-header">
+            Hash History Basketball League
+        </h1>
+        
+        <h3 className="header text-center">
+            Select a team.
+        </h3>
+  </div>;
 };
 
 export default Home;
