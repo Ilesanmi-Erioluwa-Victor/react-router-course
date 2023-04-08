@@ -1,4 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+
+import Navbar from "./Navbar"
 import Home from "../Pages/Home"
 import Teams from "../Pages/Teams"
 import Players from "../Pages/Players"
