@@ -3,7 +3,7 @@ import React from 'react'
 const Teams = () => {
   return (
     <div>
-      Teams..
+      Teams
     </div>
   )
 }
