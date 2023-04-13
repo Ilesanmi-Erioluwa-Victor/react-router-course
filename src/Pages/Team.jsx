@@ -42,7 +42,7 @@ const Team = () => {
     <TeamLogo id={teamId} />
     <h1 className="medium-header">{team.name}</h1>
     <h4 style={{ margin: 5 }}>
-      <Link to={{pathname: "/players"}}></Link>
+      <Link to={{ pathname: "/players", search: `?teamId=${teamId}` }}>View Roster</Link>
     </h4>
   </div>;
 };
