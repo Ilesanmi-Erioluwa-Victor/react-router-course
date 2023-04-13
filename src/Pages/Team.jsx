@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import useTeamNames from "../hooks/useTeamNames";
 import useTeamArticles from "../hooks/useTeamsArticles";
 import useTeam from "../hooks/useTeam";
@@ -40,7 +40,10 @@ const Team = () => {
 
   return <div className="panel">
     <TeamLogo id={teamId} />
-    <h1></h1>
+    <h1 className="medium-header">{team.name}</h1>
+    <h4 style={{ margin: 5 }}>
+      <Link to={{pathname: "/players"}}></Link>
+    </h4>
   </div>;
 };
 
