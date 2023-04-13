@@ -22,6 +22,9 @@ function useTeamPageData(teamId) {
 
 const Team = () => {
   const { teamId } = useParams();
+
+  const { teamNames, team, loading, articles } = useTeamPageData(teamId);
+  
   return <div>Team Page for {teamId}</div>;
 };
 
