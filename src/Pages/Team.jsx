@@ -38,7 +38,10 @@ const Team = () => {
     );
   }
 
-  return <div>Team Page for {teamId}</div>;
+  return <div className="panel">
+    <TeamLogo id={teamId} />
+    <h1></h1>
+  </div>;
 };
 
 export default Team;
