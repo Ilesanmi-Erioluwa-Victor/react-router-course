@@ -26,10 +26,14 @@ const Team = () => {
 
   const { teamNames, team, loading, articles } = useTeamPageData(teamId);
 
-  console.log({ teamNames, team, articles });
+  console.log({ team});
 
   if (loading === true) {
     return <p>Loading....</p>;
+  }
+
+  if (!team) {
+   return <p>Please refresh your browser or check your Internet settings...</p>  
   }
 
   if (!teamNames.includes(teamId)) {
