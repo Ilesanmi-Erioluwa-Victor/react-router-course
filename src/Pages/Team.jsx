@@ -15,7 +15,7 @@ function useTeamPageData(teamId) {
   return {
     teamNames,
     team,
-    loading,
+    loading : loadingTeam || loadingTeamArticles || loadingTeamNames,
     articles
   }
 }
