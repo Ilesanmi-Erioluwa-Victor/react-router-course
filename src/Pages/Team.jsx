@@ -1,8 +1,9 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
-import useTeamNames from "./hooks/useTeamNames";
-import useTeamArticles from "./hooks/useTeamArticles";
-
+import useTeamNames from "../hooks/useTeamNames";
+import useTeamArticles from "../hooks/useTeamArticles";
+import useTeam from "../hooks/useTeam"
+import TeamLogo from "../components/TeamLogo"
 
 const Team = () => {
     const { teamId } = useParams();
