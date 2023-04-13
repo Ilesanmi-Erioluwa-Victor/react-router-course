@@ -38,13 +38,19 @@ const Team = () => {
     );
   }
 
-  return <div className="panel">
-    <TeamLogo id={teamId} />
-    <h1 className="medium-header">{team.name}</h1>
-    <h4 style={{ margin: 5 }}>
-      <Link to={{ pathname: "/players", search: `?teamId=${teamId}` }}>View Roster</Link>
-    </h4>
-  </div>;
+  const { name : teamName } = team;
+
+  return (
+    <div className="panel">
+      <TeamLogo id={teamId} />
+      <h1 className="medium-header">{teamName}</h1>
+      <h4 style={{ margin: 5 }}>
+        <Link to={{ pathname: "/players", search: `?teamId=${teamId}` }}>
+          View Roster
+        </Link>
+      </h4>
+    </div>
+  );
 };
 
 export default Team;
