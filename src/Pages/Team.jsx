@@ -6,9 +6,9 @@ import useTeam from "../hooks/useTeam";
 import TeamLogo from "../components/TeamLogo";
 
 function useTeamPageData(teamId) {
-  const {} = useTeamNames();
+  const { response: teamNames, loading: loadingTeamNames } = useTeamNames();
 
-  const {} = useTeamArticles(teamId);
+  const { loading : loadingTeamArticles, response : articles} = useTeamArticles(teamId);
 
   const {} = useTeam(teamId);
 }
