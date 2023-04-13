@@ -10,7 +10,14 @@ function useTeamPageData(teamId) {
 
   const { loading : loadingTeamArticles, response : articles} = useTeamArticles(teamId);
 
-  const {} = useTeam(teamId);
+  const { response: team, loadingTeam } = useTeam(teamId);
+  
+  return {
+    teamNames,
+    team,
+    loading,
+    articles
+  }
 }
 
 const Team = () => {
