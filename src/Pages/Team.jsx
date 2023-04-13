@@ -24,6 +24,14 @@ const Team = () => {
   const { teamId } = useParams();
 
   const { teamNames, team, loading, articles } = useTeamPageData(teamId);
+
+  if (loading === true) {
+    return <p>Loading....</p>
+  }
+
+  if (!teamNames.includes(teamId)) {
+    return <h1 className="text-center"> The {teamId} is not a valid Team...</h1>
+  } 
   
   return <div>Team Page for {teamId}</div>;
 };
