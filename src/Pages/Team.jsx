@@ -26,14 +26,16 @@ const Team = () => {
 
   const { teamNames, team, loading, articles } = useTeamPageData(teamId);
 
-  console.log({ team});
+  console.log({ team });
 
   if (loading === true) {
     return <p>Loading....</p>;
   }
 
   if (!team) {
-   return <p>Please refresh your browser or check your Internet settings...</p>  
+    return (
+      <p>Please refresh your browser or check your Internet settings...</p>
+    );
   }
 
   if (!teamNames.includes(teamId)) {
@@ -42,7 +44,7 @@ const Team = () => {
     );
   }
 
-  const { name : teamName } = team;
+  const { name: teamName } = team;
 
   return (
     <div className="panel">
@@ -55,8 +57,8 @@ const Team = () => {
       </h4>
 
       <ul className="championships">
-        {teamName.championships.map((data) => (
-          <li key={data}></li>
+        {team.championships.map((data) => (
+          <li key={data}>{data}</li>
         ))}
       </ul>
     </div>
