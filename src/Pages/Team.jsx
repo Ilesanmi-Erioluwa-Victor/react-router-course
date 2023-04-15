@@ -61,6 +61,26 @@ const Team = () => {
           <li key={data}>{data}</li>
         ))}
       </ul>
+
+      <ul
+        className="info-list row"
+        style={{ width: "100%" }}
+      >
+        <li>
+          Est. <div>{team.established.toUpperCase}</div>
+        </li>
+
+        <li>
+          Manager <div>{team.manager.toUpperCase}</div>
+        </li>
+        <li>
+          Est. <div>{team.established.toUpperCase}</div>
+        </li>
+
+        <li>
+          Est. <div>{team.established.toUpperCase}</div>
+        </li>
+      </ul>
     </div>
   );
 };
