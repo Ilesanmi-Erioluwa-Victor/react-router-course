@@ -53,6 +53,12 @@ const Team = () => {
           View Roster
         </Link>
       </h4>
+
+      <ul className="championships">
+        {teamName.championships.map((data) => (
+          <li key={data}></li>
+        ))}
+      </ul>
     </div>
   );
 };
