@@ -84,7 +84,13 @@ const Team = () => {
 
       <ul className="articles">
         {articles.map((article) => {
-          <li key={article.id}></li>
+          <li key={article.id}>
+            <h4 className="article-title">
+              <Link to={`articles/${slugify(article.title)}`}>
+                {article.title}
+              </Link>
+            </h4>
+          </li>
         })}
       </ul>
     </div>
