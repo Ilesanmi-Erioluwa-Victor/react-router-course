@@ -4,8 +4,7 @@ import useTeamNames from "../hooks/useTeamNames";
 import useTeamArticles from "../hooks/useTeamsArticles";
 import useTeam from "../hooks/useTeam";
 import TeamLogo from "../components/TeamLogo";
-import { slugify } from "../Utils/Slugify"
-
+import { slugify } from "../Utils/Slugify";
 
 function useTeamPageData(teamId) {
   const { response: teamNames, loading: loadingTeamNames } = useTeamNames();
@@ -80,23 +79,28 @@ const Team = () => {
         </li>
 
         <li>
-          Records <div>{team.wins} - {team.losses}</div>
+          Records{" "}
+          <div>
+            {team.wins} - {team.losses}
+          </div>
         </li>
       </ul>
 
       <ul className="articles">
         {articles.map((article) => {
-          <li key={article.id}>
-            <h4 className="article-title">
-              <Link to={`articles/${slugify(article.title)}`}>
-                {article.title}
-              </Link>
-            </h4>
+          return (
+            <li key={article.id}>
+              <h4 className="article-title">
+                <Link to={`articles/${slugify(article.title)}`}>
+                  {article.title}
+                </Link>
+              </h4>
 
-            <div className="article-date">
-              {new Date(article.date).toLocaleDateString()}
-            </div>
-          </li>
+              <div className="article-date">
+                {new Date(article.date).toLocaleDateString()}
+              </div>
+            </li>
+          );
         })}
       </ul>
     </div>
