@@ -74,12 +74,18 @@ const Team = () => {
           Manager <div>{team.manager.toUpperCase}</div>
         </li>
         <li>
-          Est. <div>{team.established.toUpperCase}</div>
+          Coach <div>{team.coach.toUpperCase}</div>
         </li>
 
         <li>
-          Est. <div>{team.established.toUpperCase}</div>
+          Records <div>{team.wins} - {team.losses}</div>
         </li>
+      </ul>
+
+      <ul className="articles">
+        {articles.map((article) => {
+          <li key={article.id}></li>
+        })}
       </ul>
     </div>
   );
