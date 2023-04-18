@@ -4,6 +4,8 @@ import useTeamNames from "../hooks/useTeamNames";
 import useTeamArticles from "../hooks/useTeamsArticles";
 import useTeam from "../hooks/useTeam";
 import TeamLogo from "../components/TeamLogo";
+import { slugify } from "../Utils/Slugify"
+
 
 function useTeamPageData(teamId) {
   const { response: teamNames, loading: loadingTeamNames } = useTeamNames();
@@ -90,6 +92,10 @@ const Team = () => {
                 {article.title}
               </Link>
             </h4>
+
+            <div className="article-date">
+              {new Date(article.date).toLocaleDateString()}
+            </div>
           </li>
         })}
       </ul>
