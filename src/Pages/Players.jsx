@@ -9,6 +9,14 @@ function Sidebar({title, list}) {
       <h3 className="header">
         {title}
       </h3>
+
+      <ul className="sidebar-list">
+        {list.map((item) => (
+          <CustomLink> 
+            {item.toUpperCase()}
+          </CustomLink>
+        ))}
+      </ul>
     </div>
   )
 }
