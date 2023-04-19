@@ -23,6 +23,16 @@ const Player = () => {
       />
 
       <h1 className="medium-header">{player.name}</h1>
+      <h3 className="header">#{player.number}</h3>
+
+      <div className="row">
+        <ul
+          className="info-list"
+          style={{ marginRight: 80 }}
+        >
+          <li>Team</li>
+        </ul>
+      </div>
     </div>
   );
 };
