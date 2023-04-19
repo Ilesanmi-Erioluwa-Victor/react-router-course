@@ -14,7 +14,9 @@ const Player = () => {
   if (!player) {
     return null;
   }
-  return <div></div>;
+    return <div className="panel">
+      {JSON.stringify(player, null, 2)}
+  </div>;
 };
 
 export default Player;
