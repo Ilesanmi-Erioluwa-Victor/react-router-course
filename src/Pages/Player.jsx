@@ -1,9 +1,11 @@
 import React from 'react'
-import { useSearchParams, Link } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
+import usePlayer from "../hooks/usePlayer"
+
 
 const Player = () => {
 
-    const { playerId } = useSearchParams();
+    const { playerId } = useParams();
   return (
     <div>
       
