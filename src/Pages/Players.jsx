@@ -1,12 +1,10 @@
-import React from 'react'
+import React from "react";
+import { useLocation, useSearchParams } from "react-router-dom";
 
 const Players = () => {
-  return (
-    <div>
-      Players
-    </div>
-  )
-}
+  const location = useLocation();
+  const [searchParams] = useSearchParams();
+  return <div>Players</div>;
+};
 
-export default Players
-
+export default Players;
