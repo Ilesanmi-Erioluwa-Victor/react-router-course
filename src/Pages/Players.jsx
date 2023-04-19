@@ -1,6 +1,7 @@
 import React from "react";
 import { useLocation, useSearchParams } from "react-router-dom";
 import usePlayerNames from "../hooks/usePlayerNames";
+import { slugify } from "../Utils/Slugify";
 
 
 function Sidebar({title, list}) { 
@@ -12,7 +13,9 @@ function Sidebar({title, list}) {
 
       <ul className="sidebar-list">
         {list.map((item) => (
-          <CustomLink> 
+          <CustomLink key={item}
+          to={slugify(item)}
+          > 
             {item.toUpperCase()}
           </CustomLink>
         ))}
