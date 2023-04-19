@@ -5,13 +5,14 @@ import Home from "../Pages/Home";
 import Teams from "../Pages/Teams";
 import Players from "../Pages/Players";
 import Team from "../Pages/Team";
+import Player from "./Player";
 
 export default function App() {
   return (
     <Router>
       <div>
         <Navbar />
-
+ 
         <Routes>
           <Route
             path="/"
@@ -19,15 +20,19 @@ export default function App() {
           />
           <Route
             path="/players"
-            element={<Players />}
-          />
+            element={<Players />}>
+            <Route path=":playerId" element={<Player />} />
+            </Route>
 
           <Route
             path="/teams"
             element={<Teams />}
           />
 
-          <Route path="/:teamId" element={<Team />} />
+          <Route
+            path="/:teamId"
+            element={<Team />}
+          />
         </Routes>
       </div>
     </Router>
