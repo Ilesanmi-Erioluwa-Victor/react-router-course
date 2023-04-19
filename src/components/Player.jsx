@@ -48,8 +48,16 @@ const Player = () => {
             PPG <div>{player.ppg}</div>
           </li>
         </ul>
-  
 
+        <ul className="info-list">
+          <li>
+            APG <div>{player.apg}</div>
+          </li>
+          <li>
+            SPG<div>{player.spg}</div>
+          </li>
+          <li>RPG <div>{player.rpg}</div></li>
+        </ul>
       </div>
     </div>
   );
