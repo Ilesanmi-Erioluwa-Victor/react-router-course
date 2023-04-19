@@ -48,8 +48,8 @@ const Player = () => {
             PPG <div>{player.ppg}</div>
           </li>
         </ul>
+  
 
-        
       </div>
     </div>
   );
