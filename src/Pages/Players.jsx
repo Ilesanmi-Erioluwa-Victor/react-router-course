@@ -14,9 +14,17 @@ function CustomLink({ to, children }) {
 
   return (
     <li>
-      <Link to={to}>{children}</Link>
+      <Link
+        to={{
+          pathname: to,
+          search: location.search,
+        }}
+        style={{ ...Styles }}
+      >
+        {children}
+      </Link>
     </li>
-  )
+  );
 }
 
 function Sidebar({ title, list }) {
