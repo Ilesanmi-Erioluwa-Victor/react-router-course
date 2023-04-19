@@ -5,8 +5,12 @@ import { slugify } from "../Utils/Slugify";
 
 function CustomLink({ to, children }) {
   const location = useLocation();
-  const playerId = location.pathname.split("/")[2]
-  const match = location.pathname === to;
+  const playerId = location.pathname.split("/")[2];
+
+  const match = playerId === to;
+
+  const Styles =
+    match === true ? { fontWeight: 900, color: "var(--white" } : {};
 }
 
 function Sidebar({ title, list }) {
