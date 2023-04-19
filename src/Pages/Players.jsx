@@ -2,6 +2,12 @@ import React from "react";
 import { useLocation, useSearchParams } from "react-router-dom";
 import usePlayerNames from "../hooks/usePlayerNames";
 
+
+function Sidebar() { 
+  
+}
+
+
 const Players = () => {
   const location = useLocation();
   const [searchParams] = useSearchParams();
