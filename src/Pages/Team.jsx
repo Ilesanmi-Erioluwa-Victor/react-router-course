@@ -57,6 +57,8 @@ const Team = () => {
         </Link>
       </h4>
 
+      <h4>Championships</h4>
+
       <ul className="championships">
         {team.championships.map((data) => (
           <li key={data}>{data}</li>
