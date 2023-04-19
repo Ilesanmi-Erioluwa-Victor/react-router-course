@@ -14,9 +14,17 @@ const Player = () => {
   if (!player) {
     return null;
   }
-    return <div className="panel">
-      {JSON.stringify(player, null, 2)}
-  </div>;
+  return (
+    <div className="panel">
+      <img
+        src={player.avatar}
+        alt={`Avatar for${player.name}`}
+        className="avatar"
+      />
+
+      <h1 className="medium-header">{player.name}</h1>
+    </div>
+  );
 };
 
 export default Player;
