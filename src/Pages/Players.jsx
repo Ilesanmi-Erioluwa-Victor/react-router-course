@@ -8,11 +8,13 @@ const Players = () => {
 
   const team = searchParams.get("teamId");
 
-  const {
-    response: names,
-    loading
-  } = usePlayerNames
+  const { response: names, loading } = usePlayerNames(team);
 
+  if (loading === true) {
+    return null;
+  }
+
+  console.log({names})
   return <div className="container">Players for team {team}</div>;
 };
 
