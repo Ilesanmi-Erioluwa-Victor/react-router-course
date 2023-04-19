@@ -49,8 +49,7 @@ function Sidebar({ title, list }) {
 const Players = () => {
   const location = useLocation();
   const [searchParams] = useSearchParams();
-
-  const team = searchParams.get("teamId");
+  const [team, setTeam] = React.useState(searchParams.get("teamId"));
 
   const { response: names, loading } = usePlayerNames(team);
 
@@ -58,7 +57,6 @@ const Players = () => {
     return null;
   }
 
-  console.log({ names });
   return <div className="container">Players for team {team}</div>;
 };
 
