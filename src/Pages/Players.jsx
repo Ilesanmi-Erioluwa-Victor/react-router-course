@@ -6,8 +6,8 @@ const Players = () => {
   const [searchParams] = useSearchParams();
 
   const team = searchParams.get("teamId");
-  
-  return <div>Players</div>;
+
+  return <div className="container">Players for team {team}</div>;
 };
 
 export default Players;
