@@ -3,8 +3,14 @@ import { useLocation, useSearchParams } from "react-router-dom";
 import usePlayerNames from "../hooks/usePlayerNames";
 
 
-function Sidebar() { 
-  
+function Sidebar({title, list}) { 
+  return (
+    <div>
+      <h3 className="header">
+        {title}
+      </h3>
+    </div>
+  )
 }
 
 
