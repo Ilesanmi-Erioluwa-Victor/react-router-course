@@ -1,5 +1,5 @@
 import React from "react";
-import { useLocation, useSearchParams } from "react-router-dom";
+import { useLocation, useSearchParams, Link } from "react-router-dom";
 import usePlayerNames from "../hooks/usePlayerNames";
 import { slugify } from "../Utils/Slugify";
 
@@ -11,6 +11,12 @@ function CustomLink({ to, children }) {
 
   const Styles =
     match === true ? { fontWeight: 900, color: "var(--white" } : {};
+
+  return (
+    <li>
+      <Link to={to}>{children}</Link>
+    </li>
+  )
 }
 
 function Sidebar({ title, list }) {
