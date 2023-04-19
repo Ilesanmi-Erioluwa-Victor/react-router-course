@@ -1,17 +1,20 @@
-import React from 'react'
-import { useParams, Link } from 'react-router-dom'
-import usePlayer from "../hooks/usePlayer"
-
+import React from "react";
+import { useParams, Link } from "react-router-dom";
+import usePlayer from "../hooks/usePlayer";
 
 const Player = () => {
+  const { playerId } = useParams();
 
-    const { playerId } = useParams();
-  return (
-    <div>
-      
-    </div>
-  )
-}
+  const { loading, response: player } = usePlayer(playerId);
 
-export default Player
+  if (loading === true) {
+    return null;
+  }
 
+  if (!player) {
+    return null;
+  }
+  return <div></div>;
+};
+
+export default Player;
