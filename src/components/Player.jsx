@@ -30,7 +30,14 @@ const Player = () => {
           className="info-list"
           style={{ marginRight: 80 }}
         >
-          <li>Team</li>
+          <li>
+            Team
+            <div>
+              <Link to={`/${player.teamId}`}>
+                {player.teamId[0].toUpperCase() + player.teamId.slice(1)}
+              </Link>
+            </div>
+          </li>
         </ul>
       </div>
     </div>
