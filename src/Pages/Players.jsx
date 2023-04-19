@@ -66,7 +66,14 @@ const Players = () => {
     return null;
   }
 
-  return <div className="container">Players for team {team}</div>;
+  return (
+    <div className="container">
+      <Sidebar
+        title={"Players"}
+        list={names}
+      />
+    </div>
+  );
 };
 
 export default Players;
