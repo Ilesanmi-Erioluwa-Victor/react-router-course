@@ -6,3 +6,4 @@ My name is Ilesanmi Erioluwa Victor, you can follow me on to learn more about so
 - - ### useParam
 - ### Query Strings
 - ### Link (Customized Link)
+- ### Outlet
