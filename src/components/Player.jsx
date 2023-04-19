@@ -38,7 +38,18 @@ const Player = () => {
               </Link>
             </div>
           </li>
+
+          <li>
+            Position
+            <div>{player.position}</div>
+          </li>
+
+          <li>
+            PPG <div>{player.ppg}</div>
+          </li>
         </ul>
+
+        
       </div>
     </div>
   );
