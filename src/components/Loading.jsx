@@ -5,13 +5,13 @@ function Delayed({ children, wait = 500 }) {
 
   React.useEffect(() => {
     const timeOut = window.setTimeout(() => {
-      
-    }, wait)
+      setShow(true);
+    }, wait);
 
-    return () =>
-  }, [])
+    return () => window.clearTimeout(timeOut);
+  });
 
-  return show === true ? children : null
+  return show === true ? children : null;
 }
 
 export const Loading = () => {
@@ -20,5 +20,4 @@ export const Loading = () => {
       <div className="loading center"></div>;
     </Delayed>
   );
- 
 };
