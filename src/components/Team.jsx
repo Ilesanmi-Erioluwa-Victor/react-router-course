@@ -5,7 +5,15 @@ import TeamLogo from "./TeamLogo";
 
 const Team = () => {
   const { teamId } = useParams();
-  return <div></div>;
+
+  const { loading, response: team } = useTeam(teamId);
+
+    if (loading === true) {
+        return null
+    }
+    return <div className="panel">
+      {JSON.stringify(team, null, 2)}
+  </div>;
 };
 
 export default Team;
