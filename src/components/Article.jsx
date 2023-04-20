@@ -10,7 +10,14 @@ const Article = () => {
   if (loading === true) {
     return null;
   }
-  return <div></div>;
+  return (
+    <div className="panel">
+      <article className="article">
+        <h1 className="header">{article.title}</h1>
+        <p>{article.body}</p>
+      </article>
+    </div>
+  );
 };
 
 export default Article;
