@@ -6,6 +6,10 @@ const Article = () => {
   const { teamId, articleId } = useParams();
 
   const { response: article, loading } = userArticle({ teamId, articleId });
+
+  if (loading === true) {
+    return null;
+  }
   return <div></div>;
 };
 
