@@ -10,7 +10,9 @@ const Team = () => {
 
   if (loading === true) {
     return null;
-  }
+    }
+    
+    console.log({team})
   return (
     <div className="panel">
       <div style={{ width: "100%" }}>
@@ -21,14 +23,14 @@ const Team = () => {
         <h1 className="medium-header">{team.name}</h1>
         <ul className="info-list row">
           <li>
-            Est. <div>{team.established.toUpperCase}</div>
+            Est. <div>{team.established}</div>
           </li>
 
           <li>
-            Manager <div>{team.manager.toUpperCase}</div>
+            Manager <div>{team.manager}</div>
           </li>
           <li>
-            Coach <div>{team.coach.toUpperCase}</div>
+            Coach <div>{team.coach}</div>
           </li>
         </ul>
         <Link
