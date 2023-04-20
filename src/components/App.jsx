@@ -44,6 +44,13 @@ export default function App() {
             element={<Teams />}
           >
             <Route
+              path=""
+              element={
+                <div className="sidebar-instruction">Please, select a Team</div>
+              }
+            />
+
+            <Route
               path=":teamId"
               element={<Team />}
             />
@@ -58,6 +65,14 @@ export default function App() {
             path=":teamId/articles"
             element={<Articles />}
           >
+            <Route
+              path=""
+              element={
+                <div className="sidebar-instruction">
+                  Please, select a Article
+                </div>
+              }
+            />
             <Route
               path=":articleId"
               element={<Article />}
