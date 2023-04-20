@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 import Home from "../Pages/Home";
 import Teams from "../Pages/Teams";
 import Players from "../Pages/Players";
-import Team from "../Pages/Team";
+import TeamPage from "../Pages/TeamPage";
 import Player from "./Player";
 
 export default function App() {
@@ -31,7 +31,7 @@ export default function App() {
 
           <Route
             path="/:teamId"
-            element={<Team />}
+            element={<TeamPage />}
           />
         </Routes>
       </div>
