@@ -5,6 +5,7 @@ import useTeamArticles from "../hooks/useTeamsArticles";
 import useTeam from "../hooks/useTeam";
 import TeamLogo from "../components/TeamLogo";
 import { slugify } from "../Utils/Slugify";
+import { Loading } from "../components/Loading";
 
 function useTeamPageData(teamId) {
   const { response: teamNames, loading: loadingTeamNames } = useTeamNames();
@@ -28,7 +29,7 @@ const TeamPage = () => {
   const { teamNames, team, loading, articles } = useTeamPageData(teamId);
 
   if (loading === true) {
-    return <p>Loading....</p>;
+    return <Loading />;
   }
 
   if (!team) {
