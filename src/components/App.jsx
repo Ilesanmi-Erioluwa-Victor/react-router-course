@@ -7,6 +7,8 @@ import Players from "../Pages/Players";
 import TeamPage from "../Pages/TeamPage";
 import Team from "../components/Team";
 import Player from "./Player";
+import Articles from "../Pages/Articles";
+import Article from "./Article";
 
 export default function App() {
   return (
@@ -43,6 +45,16 @@ export default function App() {
             path="/:teamId"
             element={<TeamPage />}
           />
+
+          <Route
+            path=":teamId/articles"
+            element={<Articles />}
+          >
+            <Route
+              path=":articleId"
+              element={<Article />}
+            />
+          </Route>
         </Routes>
       </div>
     </Router>
