@@ -5,6 +5,12 @@ import useTeamsArticles from "../hooks/useArticles";
 
 const Articles = () => {
   const { teamId } = useParams();
+
+    const { loading, response: articles } = useTeamsArticles(teamId);
+    
+    if (loading === true) {
+        return <p>LOADING...</p>
+    }
   return <div></div>;
 };
 
