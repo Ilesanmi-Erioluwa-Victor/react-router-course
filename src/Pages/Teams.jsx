@@ -1,8 +1,13 @@
 import React from 'react'
+import { Sidebar } from '../components/Sidebar'
 
 const Teams = () => {
   return (
-    <div>
+    <div className='container'>
+      <Sidebar 
+        title={"Teams"}
+        list={}
+      />
       Teams
     </div>
   )
