@@ -22,12 +22,10 @@ function useTeamPageData(teamId) {
   };
 }
 
-const Team = () => {
+const TeamPage = () => {
   const { teamId } = useParams();
 
   const { teamNames, team, loading, articles } = useTeamPageData(teamId);
-
-  console.log({ team });
 
   if (loading === true) {
     return <p>Loading....</p>;
@@ -109,4 +107,4 @@ const Team = () => {
   );
 };
 
-export default Team;
+export default TeamPage;
