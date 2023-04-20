@@ -12,7 +12,11 @@ const Team = () => {
         return null
     }
     return <div className="panel">
-      {JSON.stringify(team, null, 2)}
+        <div style={{ width: "100%" }}>
+            <TeamLogo id={team.id} className="center" />
+            <h1 className="medium-header">{team.name}</h1>
+            
+      </div>
   </div>;
 };
 
