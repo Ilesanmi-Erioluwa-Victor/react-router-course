@@ -26,6 +26,14 @@ export default function App() {
             element={<Players />}
           >
             <Route
+              path=""
+              element={
+                <div className="sidebar-instruction">
+                  Please, select a Player
+                </div>
+              }
+            />
+            <Route
               path=":playerId"
               element={<Player />}
             />
