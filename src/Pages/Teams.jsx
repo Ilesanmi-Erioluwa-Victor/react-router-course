@@ -4,10 +4,10 @@ import { Sidebar } from '../components/Sidebar'
 const Teams = () => {
   return (
     <div className='container'>
-      <Sidebar 
+      {/* <Sidebar 
         title={"Teams"}
         list={}
-      />
+      /> */}
       Teams
     </div>
   )

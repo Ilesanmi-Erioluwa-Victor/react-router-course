@@ -1,13 +1,11 @@
-import React from 'react'
-import { Link, useParams } from 'react-router-dom'
+import React from "react";
+import { Link, useParams } from "react-router-dom";
+import useTeam from "../hooks/useTeam";
+import TeamLogo from "./TeamLogo";
 
 const Team = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+  const { teamId } = useParams();
+  return <div></div>;
+};
 
-export default Team
-
+export default Team;
