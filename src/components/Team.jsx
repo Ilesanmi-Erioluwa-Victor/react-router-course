@@ -12,7 +12,6 @@ const Team = () => {
     return null;
     }
     
-    console.log({team})
   return (
     <div className="panel">
       <div style={{ width: "100%" }}>
