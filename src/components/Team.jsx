@@ -14,7 +14,7 @@ const Team = () => {
   if (loading === true) {
     body = <Loading />
   } else if (team === null) {
-    body = <Navigate to={"/team"} />
+    body = <Navigate to={"/teams"} />
   } else {
     body = (
       <div style={{ width: "100%" }}>

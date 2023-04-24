@@ -65,9 +65,7 @@ const Player = () => {
       </>
     );
   }
-  if (!player) {
-    return null;
-  }
+
   return <div className="panel">{body}</div>;
 };
 

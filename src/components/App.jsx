@@ -1,14 +1,16 @@
+
+import React, {Suspense}  from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Navbar from "./Navbar";
-import Home from "../Pages/Home";
-import Teams from "../Pages/Teams";
-import Players from "../Pages/Players";
-import TeamPage from "../Pages/TeamPage";
-import Team from "../components/Team";
-import Player from "./Player";
-import Articles from "../Pages/Articles";
-import Article from "./Article";
+const Home = React.lazy( () => import("../Pages/Home")) ;
+const Teams  = React.lazy(() => import("../Pages/Teams"));
+const Players  "../Pages/Players";
+const TeamPage  "../Pages/TeamPage";
+const Team  "../components/Team";
+const Player  "./Player";
+const Articles  "../Pages/Articles";
+const Article  "./Article";
 
 export default function App() {
   return (
