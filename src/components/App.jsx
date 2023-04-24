@@ -5,10 +5,10 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./Navbar";
 const Home = React.lazy( () => import("../Pages/Home")) ;
 const Teams  = React.lazy(() => import("../Pages/Teams"));
-const Players  "../Pages/Players";
-const TeamPage  "../Pages/TeamPage";
-const Team  "../components/Team";
-const Player  "./Player";
+const Players = React.lazy( () => import ("../Pages/Players")) ;
+const TeamPage  = React.lazy(() =>import ("../Pages/TeamPage"));
+const Team  = React.lazy(() => import ("../components/Team"));
+const Player  = React.lazy(() => import ("./Player"));
 const Articles  "../Pages/Articles";
 const Article  "./Article";
 
