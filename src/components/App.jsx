@@ -1,5 +1,5 @@
 import React, { Suspense } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useRoutes } from "react-router-dom";
 
 import Navbar from "./Navbar";
 import { Loading } from "./Loading";

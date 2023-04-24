@@ -9,3 +9,4 @@ My name is Ilesanmi Erioluwa Victor, you can follow me on to learn more about so
 - ### Outlet     
 - ### Navigate
 - ### Code Splitting
+- ### Route Configs (useRoutes)
