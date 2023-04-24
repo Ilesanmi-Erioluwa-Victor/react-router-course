@@ -18,7 +18,23 @@ const Articles = React.lazy(() => import("../Pages/Articles"));
 const Article = React.lazy(() => import("./Article"));
 
 function Routers() {
-  return useRoutes([{ path: "/", element: <Home /> }]);
+  return useRoutes([
+    { path: "/", element: <Home /> },
+    {
+      path: "/players",
+      element: <Players />,
+      children: [
+        { path: ":playerId", element: <Player /> },
+        {
+          path: "",
+          element: (
+            <div className="sidebar-instruction">Please, select a Player</div>
+          ),
+        
+        },
+      ],
+    },
+  ]);
 }
 
 export default function App() {
