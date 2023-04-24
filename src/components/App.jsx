@@ -1,5 +1,10 @@
 import React, { Suspense } from "react";
-import { BrowserRouter as Router, Routes, Route, useRoutes } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useRoutes,
+} from "react-router-dom";
 
 import Navbar from "./Navbar";
 import { Loading } from "./Loading";
@@ -12,10 +17,8 @@ const Player = React.lazy(() => import("./Player"));
 const Articles = React.lazy(() => import("../Pages/Articles"));
 const Article = React.lazy(() => import("./Article"));
 
-function Routes() {
-  return useRoutes([
-    
-  ])
+function Routers() {
+  return useRoutes([{ path: "/", element: <Home /> }]);
 }
 
 export default function App() {
