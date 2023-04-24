@@ -12,6 +12,12 @@ const Player = React.lazy(() => import("./Player"));
 const Articles = React.lazy(() => import("../Pages/Articles"));
 const Article = React.lazy(() => import("./Article"));
 
+function Routes() {
+  return useRoutes([
+    
+  ])
+}
+
 export default function App() {
   return (
     <Router>
