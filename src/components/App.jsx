@@ -70,6 +70,8 @@ function Routers() {
         },
       ],
     },
+
+    {path : "*" , element : <div>Error 404, Page not found..</div>}
   ]);
 }
 
