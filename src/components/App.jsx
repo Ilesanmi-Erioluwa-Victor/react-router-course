@@ -52,6 +52,23 @@ function Routers() {
       path: "/:teamId",
       element: <TeamPage />,
     },
+
+    {
+      path: ":teamId/articles",
+      element: <Articles />,
+      children: [
+        {
+          path: "",
+          element: (
+            <div className="sidebar-instruction">Please, select a Article</div>
+          ),
+        },
+
+        {
+          path : ":articleId", element : <Article />
+        }
+      ],
+    },
   ]);
 }
 
@@ -63,23 +80,7 @@ export default function App() {
           <Navbar />
 
           <Routes>
-            <Route
-              path=":teamId/articles"
-              element={<Articles />}
-            >
-              <Route
-                path=""
-                element={
-                  <div className="sidebar-instruction">
-                    Please, select a Article
-                  </div>
-                }
-              />
-              <Route
-                path=":articleId"
-                element={<Article />}
-              />
-            </Route>
+           
           </Routes>
         </Suspense>
       </div>
