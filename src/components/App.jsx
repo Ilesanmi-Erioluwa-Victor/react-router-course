@@ -45,22 +45,8 @@ export default function App() {
           <Navbar />
 
           <Routes>
-            <Route
-              path="/"
-              element={<Home />}
-            />
-            <Route
-              path="/players"
-              element={<Players />}
-            >
-              <Route
-                path=""
-                element={
-                  <div className="sidebar-instruction">
-                    Please, select a Player
-                  </div>
-                }
-              />
+
+    
               <Route
                 path=":playerId"
                 element={<Player />}
