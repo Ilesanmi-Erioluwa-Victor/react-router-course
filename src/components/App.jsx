@@ -79,7 +79,7 @@ export default function App() {
       <div>
         <Suspense fallback={<Loading />}>
           <Navbar />
-            <Routers />
+          <Routers />
         </Suspense>
       </div>
     </Router>
