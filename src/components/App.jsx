@@ -34,6 +34,13 @@ function Routers() {
         },
       ],
     },
+
+    {
+      path : "/teams", element : <Teams />,
+      children : [{
+        
+      }]
+    }
   ]);
 }
 
@@ -45,13 +52,6 @@ export default function App() {
           <Navbar />
 
           <Routes>
-
-    
-              <Route
-                path=":playerId"
-                element={<Player />}
-              />
-            </Route>
 
             <Route
               path="/teams"
