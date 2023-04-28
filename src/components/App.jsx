@@ -38,8 +38,14 @@ function Routers() {
     {
       path : "/teams", element : <Teams />,
       children : [{
+        path:"",
+        element :  <div className="sidebar-instruction">
+                    Please, select a Team
+               </div>
         
-      }]
+      },
+      {path : ":teamId", element : <Team />}
+    ]
     }
   ]);
 }
@@ -53,24 +59,7 @@ export default function App() {
 
           <Routes>
 
-            <Route
-              path="/teams"
-              element={<Teams />}
-            >
-              <Route
-                path=""
-                element={
-                  <div className="sidebar-instruction">
-                    Please, select a Team
-                  </div>
-                }
-              />
-
-              <Route
-                path=":teamId"
-                element={<Team />}
-              />
-            </Route>
+          
 
             <Route
               path="/:teamId"
