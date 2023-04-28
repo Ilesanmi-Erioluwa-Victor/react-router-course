@@ -30,23 +30,28 @@ function Routers() {
           element: (
             <div className="sidebar-instruction">Please, select a Player</div>
           ),
-        
         },
       ],
     },
 
     {
-      path : "/teams", element : <Teams />,
-      children : [{
-        path:"",
-        element :  <div className="sidebar-instruction">
-                    Please, select a Team
-               </div>
-        
-      },
-      {path : ":teamId", element : <Team />}
-    ]
-    }
+      path: "/teams",
+      element: <Teams />,
+      children: [
+        {
+          path: "",
+          element: (
+            <div className="sidebar-instruction">Please, select a Team</div>
+          ),
+        },
+        { path: ":teamId", element: <Team /> },
+      ],
+    },
+
+    {
+      path: "/:teamId",
+      element: <TeamPage />,
+    },
   ]);
 }
 
@@ -58,14 +63,6 @@ export default function App() {
           <Navbar />
 
           <Routes>
-
-          
-
-            <Route
-              path="/:teamId"
-              element={<TeamPage />}
-            />
-
             <Route
               path=":teamId/articles"
               element={<Articles />}
