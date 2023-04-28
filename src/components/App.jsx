@@ -65,8 +65,9 @@ function Routers() {
         },
 
         {
-          path : ":articleId", element : <Article />
-        }
+          path: ":articleId",
+          element: <Article />,
+        },
       ],
     },
   ]);
@@ -78,10 +79,7 @@ export default function App() {
       <div>
         <Suspense fallback={<Loading />}>
           <Navbar />
-
-          <Routes>
-           
-          </Routes>
+            <Routers />
         </Suspense>
       </div>
     </Router>
