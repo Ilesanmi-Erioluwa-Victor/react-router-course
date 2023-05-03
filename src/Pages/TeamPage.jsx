@@ -63,7 +63,6 @@ const TeamPage = () => {
           <li key={data}>{data}</li>
         ))}
       </ul>
-
       <ul
         className="info-list row"
         style={{ width: "100%" }}

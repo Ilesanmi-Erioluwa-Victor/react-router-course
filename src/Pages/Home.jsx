@@ -8,9 +8,6 @@ import { Loading } from "../components/Loading";
 const Home = () => {
   const { loading, response: teamNames } = useTeamNames();
 
-  if (loading) {
-    return null;
-  }
   return (
     <div className="container">
       <h1 className="large-header">Hash History Basketball League</h1>
