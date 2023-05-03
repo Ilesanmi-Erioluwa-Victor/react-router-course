@@ -38,6 +38,8 @@ const Team = () => {
         <Link
           to={`/${teamId}`}
           className="center btn-main"
+
+          state={{ test : "Hello"}}
         >
           {team.name} Team Page
         </Link>
